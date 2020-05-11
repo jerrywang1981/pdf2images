@@ -10,3 +10,28 @@ conda install -c conda-forge poppler
 ```
 pip install pdf2image
 ```
+
+### to build image
+```
+docker image build -t jerrywang1981/pdf2image:0.0.1 .
+```
+
+### or pull existing if you want to
+```
+docker pull jerrywang1981/pdf2image:0.0.1
+```
+
+### to convert pdf
+* /xxx your pdf folder
+* /yyy your output folder
+
+```
+docker run --rm -v /xxx:/input -v /yyy:/output -it jerrywang1981/pdf2image:0.0.1
+```
+
+## if you want to build executable
+```
+go build pdf2image.go
+chmod +x pdf2image
+```
+
